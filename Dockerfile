@@ -16,7 +16,7 @@ ENV APP_HOME=/usr/app
 WORKDIR $APP_HOME
 
 COPY --from=BUILD $APP_HOME .
-RUN cs /usr/app && ls
+RUN cd /usr/app && ls
 
 
 
