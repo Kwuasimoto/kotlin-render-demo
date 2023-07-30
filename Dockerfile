@@ -9,7 +9,7 @@ RUN gradle clean build
 
 FROM openjdk:17
 
-RUN mkdir usr/app
+RUN mkdir /usr/app
 RUN cd usr && ls
 
 #ENV JAR_NAME=render-plain-demo-0.0.1-SNAPSHOT.jar
