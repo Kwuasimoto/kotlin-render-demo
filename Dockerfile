@@ -4,10 +4,9 @@ RUN gradle clean build
 
 FROM openjdk:17
 ENV JAR_NAME=tradeagent-server-0.0.1-SNAPSHOT.jar
-ENV APP_HOME=/usr/app
 
 WORKDIR $APP_HOME
-COPY --from=BUILD $APP_HOME .
+COPY --from=BUILD . .
 
 EXPOSE 8080
-ENTRYPOINT exec java -jar $APP_HOME/build/libs/$JAR_NAME
+ENTRYPOINT exec java -jar build/libs/$JAR_NAME
