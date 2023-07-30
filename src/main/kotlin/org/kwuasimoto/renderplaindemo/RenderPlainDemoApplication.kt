@@ -7,6 +7,5 @@ import org.springframework.boot.runApplication
 class RenderPlainDemoApplication
 
 fun main(args: Array<String>) {
-    print("Hello World")
     runApplication<RenderPlainDemoApplication>(*args)
 }
