@@ -2,7 +2,12 @@ FROM gradle:latest AS build
 COPY . .
 RUN gradle clean build
 
-FROM openjdk:17.0.1-jdk-slim
-COPY --from=build /target/render-plain-demo-0.0.1-SNAPSHOT.jar demo.jar
+FROM openjdk:17
+ENV JAR_NAME=tradeagent-server-0.0.1-SNAPSHOT.jar
+ENV APP_HOME=/usr/app
+
+WORKDIR $APP_HOME
+COPY --from=BUILD $APP_HOME .
+
 EXPOSE 8080
-ENTRYPOINT ["java", "-jar", "demo.jar"]
+ENTRYPOINT exec java -jar $APP_HOME/build/libs/$JAR_NAME
