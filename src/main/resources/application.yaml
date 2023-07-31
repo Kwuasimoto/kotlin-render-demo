@@ -3,3 +3,14 @@ logging:
     org:
       springframework:
         security: DEBUG
+
+spring:
+  profile:
+    active: default
+  jpa:
+    open-in-view: false
+
+hibernate:
+  jdbc:
+    lob:
+      non_contextual_creation: true
