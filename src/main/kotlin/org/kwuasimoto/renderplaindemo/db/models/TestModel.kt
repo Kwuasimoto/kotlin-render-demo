@@ -7,7 +7,7 @@ import jakarta.persistence.Table
 
 
 @Entity
-@Table(name = "tests")
+@Table(name = "test_models")
 data class TestModel (
     @Id
     @Column(name = "id")

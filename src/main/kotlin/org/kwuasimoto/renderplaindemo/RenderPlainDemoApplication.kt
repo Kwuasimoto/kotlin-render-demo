@@ -19,6 +19,7 @@ private fun determineEnvironment(): String {
 fun main(args: Array<String>) {
     val runningEnvironment = determineEnvironment()
     logger.info("Running environment: [env=$runningEnvironment]")
+    logger.info("SPRING_JPA_DATASOURCE_URL: [url=${System.getenv("SPRING_JPA_DATASOURCE_URL")}]")
     System.setProperty("spring.profiles.active", runningEnvironment)
     runApplication<RenderPlainDemoApplication>(*args)
 }

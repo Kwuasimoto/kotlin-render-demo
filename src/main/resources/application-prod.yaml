@@ -6,13 +6,12 @@ logging:
 
 spring:
   jpa:
-    open-in-view: false
-    databasePlatform: org.hibernate.dialect.PostgreSQLDialect
-    showSql: true
+    showSql: false
   datasource:
     url: ${SPRING_JPA_DATASOURCE_URL}
     username: ${SPRING_JPA_DATASOURCE_USERNAME}
     password: ${SPRING_JPA_DATASOURCE_PASSWORD}
+
 hibernate:
   jdbc:
     lob:

@@ -5,10 +5,16 @@ logging:
         security: DEBUG
 
 spring:
-  jpa:
-    open-in-view: false
-    databasePlatform: org.hibernate.dialect.PostgreSQLDialect
-    showSql: true
+  database: postgresql
+  open-in-view: false
+  showSql: true
+  hibernate:
+    ddl-auto: update
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      format_sql: true
+  database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 hibernate:
   jdbc:
