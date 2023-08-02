@@ -13,19 +13,21 @@ data class DataRequest(
     val payload: String
 )
 
+data class DataResponse(
+    val payload: String
+)
+
 @RestController
 @RequestMapping("/test")
 class TestController {
 
     private val logger = LoggerFactory.getLogger(TestController::class.java)
 
-
-
     @GetMapping
-    fun helloWorld(request: HttpServletRequest): ResponseEntity<String> {
+    fun helloWorld(request: HttpServletRequest): ResponseEntity<DataResponse> {
         logger.info("Incoming fetch request")
         logger.info("$request")
-        return ResponseEntity.ok("Hello World")
+        return ResponseEntity.ok(DataResponse(payload = "Hello World"))
     }
 
     @PostMapping
