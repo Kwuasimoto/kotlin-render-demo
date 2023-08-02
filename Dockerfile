@@ -17,4 +17,4 @@ WORKDIR $APP_HOME
 
 COPY --from=BUILD $APP_HOME .
 
-ENTRYPOINT exec java -jar $APP_HOME/build/libs/$JAR_NAME
+ENTRYPOINT exec java -jar $APP_HOME/build/libs/$JAR_NAME --spring.profiles.active=prod

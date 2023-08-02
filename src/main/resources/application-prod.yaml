@@ -9,6 +9,10 @@ spring:
     open-in-view: false
     databasePlatform: org.hibernate.dialect.PostgreSQLDialect
     showSql: true
+  datasource:
+    url: jdbc:postgresql://dpg-cj564dgeba7s73dpv9dg-a.oregon-postgres.render.com:5432/test_db_b0cl
+    username: tdank
+    password: XAemYWCM8HAHcBklS7YkqZnKhqwV1d3t
 
 hibernate:
   jdbc:
