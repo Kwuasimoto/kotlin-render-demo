@@ -10,9 +10,9 @@ spring:
     databasePlatform: org.hibernate.dialect.PostgreSQLDialect
     showSql: true
   datasource:
-    url: jdbc:postgresql://dpg-cj564dgeba7s73dpv9dg-a:5432/test_db_b0cl
-    username: tdank
-    password: XAemYWCM8HAHcBklS7YkqZnKhqwV1d3t
+    url: ${SPRING_JPA_DATASOURCE_URL}
+    username: ${SPRING_JPA_DATASOURCE_USERNAME}
+    password: ${SPRING_JPA_DATASOURCE_PASSWORD}
 hibernate:
   jdbc:
     lob:
